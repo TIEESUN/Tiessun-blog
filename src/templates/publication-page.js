@@ -8,7 +8,7 @@ export const pageQuery = graphql`
   query PublicationQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { template: { eq: "publication" } } }
+      filter: { frontmatter: { template: { eq: "publication-page" } } }
     ) {
       edges {
         node {
