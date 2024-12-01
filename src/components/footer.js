@@ -12,7 +12,7 @@ const Footer = () => (
   >
     <div className="container">
       <p>
-        Fighting against the unknown like the OP Hokage, Made with{" "}
+        Guarding against the unknown like a Hokage, Made with{" "}
         <span className="icon -love">
           <RiHeart2Line />
         </span>{" "}
