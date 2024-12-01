@@ -34,25 +34,25 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   let blogPostsCount = 0;
 
   posts.forEach((post, index) => {
-    const { id, frontmatter } = post.node;
-    const { slug, template, title } = frontmatter;
-
-    // Check for a valid slug or fallback
-    const pagePath = slug || `/publication/${title.replace(/\s+/g, "-").toLowerCase()}`;
-
-    // Handle missing template
-    if (!template) {
-      reporter.warn(`Missing template for post with slug: ${pagePath}`);
-      return;
-    }
-
+    const id = post.node.id;
+    const { slug, template } = post.node.frontmatter;
     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
     const next = index === 0 ? null : posts[index - 1].node;
 
+    if (!slug || !template) {
+      reporter.warn(`Missing slug or template for node: ${id}`);
+      return;
+    }
+
+    // Map `publication` to `publication-page.js`
+    const componentPath = template === "publication" 
+      ? path.resolve(`src/templates/publication-page.js`) 
+      : path.resolve(`src/templates/${template}.js`);
+
     createPage({
-      path: pagePath,
-      component: path.resolve(`src/templates/${String(template)}.js`),
-      // additional data can be passed via context
+      path: slug,
+      component: componentPath,
+      // Additional data can be passed via context
       context: {
         id,
         previous,
