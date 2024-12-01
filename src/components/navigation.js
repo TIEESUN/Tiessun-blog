@@ -19,9 +19,13 @@ const MenuItems = [
     title: "Blog",
   },
   {
-    path: "/contact",
-    title: "Contact",
+    path: "/publication",
+    title: "Publication",
   },
+  // {
+  //   path: "/contact",
+  //   title: "Contact",
+  // },
 ]
 
 const ListLink = props => (
