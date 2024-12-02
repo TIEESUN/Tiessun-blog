@@ -1,7 +1,7 @@
 ---
 template: about-page
 slug: /about
-title: Who We Are
+title: Who We Are 🐱‍👤
 ---
 ![](/assets/hoakges.png)
 
