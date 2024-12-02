@@ -3,7 +3,7 @@ template: index-page
 slug: /
 title: Muhammad Sawood
 tagline: Threat Intel
-featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
+featuredImage: /assets/narruto.jpeg
 cta:
   ctaText: Know more
   ctaLink: /about
