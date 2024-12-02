@@ -22,8 +22,6 @@ The Mysterious Elephant group is well-known for exploiting vulnerabilities in CH
 
 (Decoy Themes in APT Bitter Attacks)
 
-
-
 Qi'anxin Threat Intelligence Center and 360 Threat Intelligence Center have revealed a high probability that APT-K-47 is involved in Bitter's campaign. The ORPC Backdoor, associated with the Mysterious Elephant group, along with a recent C# backdoor code used to execute CHM files in the attack, closely resembles malicious samples reported by StrikeReady Labs, which disclosed details of the Bitter group's attack arsenal.
 
 I identified a malicious file MD5 hash for one of the group’s decoy themes on Qax, which will assist in tracking their activities and infrastructure.
@@ -53,7 +51,6 @@ We used Shodan using my hunt rule and try to find out if we get something intere
 \
 **Hunt Rule:**
 
-
 ```apex
 HTTP/1.1 403 Forbidden Server: LiteSpeed Content-Length: 1229 port:443
 ```
@@ -62,15 +59,11 @@ HTTP/1.1 403 Forbidden Server: LiteSpeed Content-Length: 1229 port:443
 
 (Hunt Rule Application Results in Shodan)
 
-
-
 We then explored various methods to gather indicators that would allow us to pivot further into their infrastructure. Fortunately, I uncovered valuable information related to APT-Bitter through ‘Mailtrail.’ As a threat researcher, it's essential to stay vigilant and monitor all possible sources. [Mailtrail](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) provided critical malicious indicators that enabled us to effectively pivot and continue hunting the APT-Bitter infrastructure.
 
 ![](/assets/9.png)
 
 (Mailtrail Analysis for Malicious Indicators)
-
-
 
 I gathered all the indicators and worked on resolving them. To resolve the indicators, I used an excellent Python-based tool called Domain-Ip, created by [Smackerdodi2](https://github.com/smackerdodi/domain-ip)
 
@@ -96,8 +89,6 @@ Let’s verify these IPs using different intelligence tools to determine if they
 (Malicious Domain Virus total)
 
 We discovered that a particular domain is malicious, which serves as a valuable pivot point for further investigation. We confirmed that the identified IP is malicious and connects to the domain **‘devflowservice\[.]com.’** Additionally, we now know that the host provider they are using is **Host Sailor Ltd**.
-
-
 
 **2) 93.189.61.84**
 
@@ -129,7 +120,13 @@ We’ve now connected enough dots regarding the domain, so it’s time to pivot.
 
 ![](/assets/16.jpg)
 
-(SSH Fingerprint Verification in VIEWALLDATA)
+ 
+
+```
+               (SSH Fingerprint Verification in VIEWALLDATA)
+```
+
+
 
 Now, we need to open 'VIEWALLDATA' to check the SSH fingerprint key.
 
@@ -141,14 +138,9 @@ Let’s create a hunt rule to identify SSH clusters using this fingerprint, alon
 
 **Hunt rule:**
 
-
 ```apex
 ((services.ssh.server_host_key.fingerprint_sha256="20ac9eeb6288b7a706b9f45a34fc1f89758d2 d9693854bddcc76c44e9d6547df")	and	autonomous_system.name=`HS`)	and location.country=`Netherlands`
 ```
-
-
-
-
 
 ![](/assets/18.jpg)
 
@@ -162,8 +154,6 @@ We found 12 results associated with the autonomous system 'Host sailor.' Now, we
 
 (Virus_total)
 
-
-
 **194.36.191.205**
 
 ![](/assets/20.jpg)
@@ -173,8 +163,6 @@ We found 12 results associated with the autonomous system 'Host sailor.' Now, we
 ![](/assets/21.jpg)
 
 (Generic Trojan Detection on IP 194.36.191.205)
-
-
 
 As we can see, this IP is associated with the malware family known as **Generic Trojan**. While examining the IP address 194.36.191.205, I discovered an MD5 hash that piqued my curiosity, prompting me to investigate what lies behind this hash.
 
