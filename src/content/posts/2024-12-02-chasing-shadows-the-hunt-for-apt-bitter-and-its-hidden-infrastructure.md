@@ -120,13 +120,9 @@ We’ve now connected enough dots regarding the domain, so it’s time to pivot.
 
 ![](/assets/16.jpg)
 
- 
-
+```html
+<p>                    (SSH Fingerprint Verification in VIEWALLDATA)</p>
 ```
-               (SSH Fingerprint Verification in VIEWALLDATA)
-```
-
-
 
 Now, we need to open 'VIEWALLDATA' to check the SSH fingerprint key.
 
