@@ -1,8 +1,32 @@
 ---
 template: publication-page
-title: My Publiction
-abstract: sdfsdfsdfsdfsdf
-link: https://www.google.com/
-date: 2024-12-01
+title: "Spear-Phishing campaigns: Link Vulnerability leads to phishing attacks,
+  Spear-Phishing electronic/UAV communication-scam targeted"
+abstract: One of the most important strategies for gaining unauthentic early
+  access to some person/company's computing resources/data is spear phishing.
+  Phishing is, at its core, a sort of social engineering intended to persuade a
+  user to give sensitive information or run a payload that will infect their
+  system. Spear phishing is a type of phishing in which bogus emails are sent to
+  specific businesses with the goal of obtaining confidential information. A
+  successful phishing campaign necessitates the use of a few different resources
+  as well as some setup. Impersonation, inducement, and access- control bypass
+  techniques are among its approaches. In this paper we have studied and found
+  up to date approaches to spear phishing attacks and their preventative
+  measures. The paper also demonstrates the steps to set up and run successful
+  phishing campaign and the results astonishingly shows that even only
+  personality-targeted messaging can alter the response to phishing attacks. As
+  a result of learning the facts, the paper suggests that users should seek to
+  improve their security awareness by becoming familiar with the warning signs
+  of phishing attacks. Moreover, more often in Unmanned Aerial Vehicles (UAV) or
+  drones (which are now being used in various domains including military
+  operations, monitoring, etc.), the resources are deployed as web services
+  which makes them vulnerable to phishing activities. A data mining technique is
+  also suggested as a tool for the detection of phishing attacks in UAVs.
+link: https://ieeexplore.ieee.org/document/9676394
+date: 2021-11-29
 ---
-d﻿sfsdfs
+<!--StartFragment-->
+
+# Spear-Phishing campaigns
+
+<!--EndFragment-->
