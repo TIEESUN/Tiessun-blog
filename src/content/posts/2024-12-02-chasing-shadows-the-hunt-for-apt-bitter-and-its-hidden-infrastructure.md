@@ -121,7 +121,22 @@ We’ve now connected enough dots regarding the domain, so it’s time to pivot.
 ![](/assets/16.jpg)
 
 ```html
-<p>                    (SSH Fingerprint Verification in VIEWALLDATA)</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .center-text {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p class="center-text">SSH Fingerprint Verification in VIEWALLDATA</p>
+</body>
+</html>
+
 ```
 
 Now, we need to open 'VIEWALLDATA' to check the SSH fingerprint key.
