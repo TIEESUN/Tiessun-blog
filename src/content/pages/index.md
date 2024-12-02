@@ -2,11 +2,10 @@
 template: index-page
 slug: /
 title: Muhammad Sawood
-tagline: Threat Intel
+tagline: Threat Intelligence Analyst | Adversary Hunter | Security Researcher
 featuredImage: /assets/narruto.jpeg
 cta:
   ctaText: Know more
   ctaLink: /about
 ---
-
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+Experienced Threat Intelligence Analyst and Adversary Hunter specializing in uncovering APT group infrastructures. As a Security Researcher, I share in-depth insights and discoveries through published research on diverse cybersecurity topics.
