@@ -8,4 +8,6 @@ cta:
   ctaText: Know more
   ctaLink: /about
 ---
+```crystal
 Experienced Threat Intelligence Analyst and Adversary Hunter specializing in uncovering APT group infrastructures. As a Security Researcher, I share in-depth insights and discoveries through published research on diverse cybersecurity topics.
+```
