@@ -1,7 +1,7 @@
 ---
 template: blog-post
-title: CHASING SHADOWS THE HUNT FOR APT BITTER AND ITS HIDDEN INFRASTRUCTURE
-slug: /blog
+title: /CHASINGSHADOWS THE HUNT FOR APT BITTER AND ITS HIDDEN INFRASTRUCTURE
+slug: /chasing-shadows-the-hunt-for-apt-bitter-and-its-hidden-infrastructure
 date: 2024-12-02 14:31
 description: Apt-Bitter
 featuredImage: /assets/designer.png
