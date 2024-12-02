@@ -1,7 +1,7 @@
 ---
 template: about-page
 slug: /about
-title: Hokage-Guard
+title: Who We Are
 ---
 ![](/assets/hoakges.png)
 
