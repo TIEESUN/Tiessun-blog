@@ -1,13 +1,6 @@
 ---
 template: publication-page
-title: "Spear-Phishing campaigns: Link Vulnerability leads to phishing attacks,
-  Spear-Phishing electronic/UAV communication-scam targeted"
-abstract: ""
+title: "Spear-Phishing campaigns: Link Vulnerability leads to phishing attacks, Spear-Phishing electronic/UAV communication-scam targeted"
 link: https://ieeexplore.ieee.org/document/9676394
 date: 2021-11-29
 ---
-<!--StartFragment-->
-
-# Spear-Phishing campaigns
-
-<!--EndFragment-->
