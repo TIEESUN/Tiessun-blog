@@ -1,7 +1,7 @@
 ---
 template: blog-post
 title: Rinnegan Awakening Unlocking Kimkusk’s-APT43 Hidden Shadow Network
-slug: /Rinnegan-Awakening-Unlocking-Kimkusk’s-APT43-Hidden-Shadow-Network
+slug: /Rinnegan Awakening Unlocking Kimkusk’s-APT43 Hidden Shadow Network
 date: 2024-12-21 22:27
 description: APT-43
 featuredImage: /assets/rinnegan.webp
