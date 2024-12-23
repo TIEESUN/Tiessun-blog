@@ -1,7 +1,7 @@
 ---
 template: blog-post
-title: Rinnegan Awakening Unlocking Kimkusk’s-APT43 Hidden Shadow Network
-slug: /Rinnegan Awakening Unlocking Kimkusk’s-APT43 Hidden Shadow Network
+title: Rinnegan Awakening Unlocking Kimsuk’s-APT43 Hidden Shadow Network
+slug: /Rinnegan Awakening Unlocking Kimsuk’s-APT43 Hidden Shadow Network
 date: 2024-12-21 22:27
 description: APT-43
 featuredImage: /assets/rinnegan.webp
@@ -98,7 +98,7 @@ HTTP/1.1 200 OK  Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1g PHP/7.2.33 X-Power
 
 ![](/assets/11-apt43.png)
 
-And we finally found the infrastructure of Kimkusky, as we can see there are 6 in total. This refined approach eliminated false positives, enabling us to identify the shadow network associated with the APT.
+And we finally found the infrastructure of Kimsuky, as we can see there are 6 in total. This refined approach eliminated false positives, enabling us to identify the shadow network associated with the APT.
 
 # ***Conclusion:***
 
