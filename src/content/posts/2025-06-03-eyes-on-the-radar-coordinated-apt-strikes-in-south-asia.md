@@ -1,9 +1,9 @@
 ---
 template: blog-post
-title: "Eyes on the Radar: Coordinated APT Strikes in South Asia"
-slug: "/Eyes-on-the-Radar: Coordinated-APT-Strikes-In-South-Asia"
+title: "The Exploit Theater: Nation-State Cyber Clashes in South Asia"
+slug: "/The Exploit-Theater: Nation-State-Cyber-Clashes-in-South Asia"
 date: 2025-06-03 10:51
-description: Eyes on the radar
+description: The Exploit Theater
 featuredImage: /assets/titlee.png
 ---
 # **Executive Summary**
