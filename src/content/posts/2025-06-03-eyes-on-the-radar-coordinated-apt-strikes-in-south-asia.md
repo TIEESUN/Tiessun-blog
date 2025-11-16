@@ -3,7 +3,9 @@ template: blog-post
 title: "The Exploit Theater: Nation-State Cyber Clashes in South Asia"
 slug: "/The Exploit-Theater: Nation-State-Cyber-Clashes-in-South Asia"
 date: 2025-06-03 10:51
-description: The Exploit Theater
+description: The Exploit Theater India Pakistan South Asia Cyberwar Apt-Bitter
+  rattle snake sidewinder Asia malware adversary threat intelligence threat
+  hunting Mr hamza Side copy transparent tribe Anonsec
 featuredImage: /assets/titlee.png
 ---
 # **Executive Summary**
