@@ -42,23 +42,13 @@ collections:
           format: "YYYY-MM-DD HH:mm",
         }
 
-      - {
-          label: "Author Name",
-          name: "author",
-          widget: "string",
-          hint: "Name of the author (will appear as hyperlink)."
-        }
-      - {
-          label: "Author URL",
-          name: "authorurl",
-          widget: "string",
-          required: false,
-          hint: "Optional link to author profile or social media."
-        }
-        
-      - { label: "SEO Description", name: "description", widget: "text" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
+     - label: "Researchers"
+        name: "researchers"
+        widget: "list"
+        hint: "Add contributor names and their profile links"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Profile URL", name: "url", widget: "string" }
       
   - name: "publications" # New collection for publications
     label: "Publications"
