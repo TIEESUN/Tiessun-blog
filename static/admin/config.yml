@@ -27,12 +27,14 @@ collections:
     fields:
       - { label: "Template", name: "template", widget: "hidden", default: "blog-post" }
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      
       - {
           label: "Slug",
           name: "slug",
           widget: "string",
           hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
         }
+
       - {
           label: "Publish Date",
           name: "date",
