@@ -31,7 +31,7 @@ collections:
           label: "Slug",
           name: "slug",
           widget: "string",
-          hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
+          hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases."
         }
       - {
           label: "Publish Date",
@@ -39,17 +39,19 @@ collections:
           widget: "datetime",
           dateFormat: "YYYY-MM-DD",
           timeFormat: "HH:mm",
-          format: "YYYY-MM-DD HH:mm",
+          format: "YYYY-MM-DD HH:mm"
         }
-
-     - label: "Researchers"
+      - label: "Researchers"
         name: "researchers"
         widget: "list"
         hint: "Add contributor names and their profile links"
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Profile URL", name: "url", widget: "string" }
-      
+      - { label: "SEO Description", name: "description", widget: "text" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
+
   - name: "publications" # New collection for publications
     label: "Publications"
     label_singular: "Publication"
@@ -100,6 +102,7 @@ collections:
           - { label: "Slug", name: "slug", widget: "hidden", default: "/contact" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "settings" # Settings collection
     label: Settings
     files:
