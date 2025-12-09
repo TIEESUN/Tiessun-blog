@@ -95,27 +95,7 @@ const Post = ({ data, pageContext }) => {
         <header className="featured-banner">
           <section className="article-header">
             <h1>{frontmatter.title}</h1>
-            <time sx={{ color: "muted" }}>{frontmatter.date}</time>
-
-            {/* Researchers Section */}
-            {frontmatter.researchers && frontmatter.researchers.length > 0 && (
-              <div className="blog-researchers">
-                <strong>Researchers:</strong>
-                <ul>
-                  {frontmatter.researchers.map((researcher, index) => (
-                    <li key={index}>
-                      <a
-                        href={researcher.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {researcher.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <time sx={{color: "muted"}}>{frontmatter.date}</time>
           </section>
           {Image ? (
             <GatsbyImage
@@ -156,11 +136,6 @@ export const pageQuery = graphql`
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }
-        researchers {
-          name
-          url
-        }
       }
     }
   }
-`
