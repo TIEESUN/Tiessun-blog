@@ -1,2 +1,2 @@
 Hello!
-Welcome to my Blog : https://hokage-guard.netlify.app/
+Welcome to my Blog : https://hokagevanguard.netlify.app/
