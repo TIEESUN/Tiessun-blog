@@ -45,6 +45,19 @@ collections:
         }
       - { label: "SEO Description", name: "description", widget: "text" }
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      
+      # Add this new section for researchers
+      - label: "Researchers/Authors"
+        name: "researchers"
+        widget: "list"
+        required: false
+        hint: "Add researchers or authors with their titles and profile links"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Title/Role", name: "title", widget: "string", required: false }
+          - { label: "Profile URL", name: "profileUrl", widget: "string", required: false }
+          - { label: "Affiliation", name: "affiliation", widget: "string", required: false }
+      
       - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
       
   - name: "publications" # New collection for publications
