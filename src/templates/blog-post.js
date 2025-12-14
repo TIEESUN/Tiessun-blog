@@ -22,6 +22,40 @@ const styles = {
       },
     },
   },
+  researchers: {
+    margin: "20px 0 30px 0",
+    padding: "15px 0",
+    borderTop: "1px solid",
+    borderBottom: "1px solid",
+    borderColor: "muted",
+  },
+  researcherItem: {
+    marginBottom: "12px",
+    "&:last-child": {
+      marginBottom: "0",
+    },
+  },
+  researcherName: {
+    fontWeight: "600",
+    marginRight: "8px",
+  },
+  researcherTitle: {
+    fontStyle: "italic",
+    color: "muted",
+    fontSize: "0.9em",
+  },
+  researcherAffiliation: {
+    color: "muted",
+    fontSize: "0.9em",
+    marginLeft: "8px",
+  },
+  researcherLink: {
+    color: "primary",
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
 }
 
 const Pagination = props => (
@@ -67,6 +101,41 @@ const Pagination = props => (
   </div>
 )
 
+// New Researchers component
+const Researchers = ({ researchers }) => {
+  if (!researchers || researchers.length === 0) {
+    return null
+  }
+
+  return (
+    <div sx={styles.researchers}>
+      <h3 sx={{ marginBottom: "15px", fontSize: "1.1rem" }}>Researchers</h3>
+      {researchers.map((researcher, index) => (
+        <div key={index} sx={styles.researcherItem}>
+          {researcher.profileUrl ? (
+            <a
+              href={researcher.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={styles.researcherLink}
+            >
+              <span sx={styles.researcherName}>{researcher.name}</span>
+            </a>
+          ) : (
+            <span sx={styles.researcherName}>{researcher.name}</span>
+          )}
+          {researcher.title && (
+            <span sx={styles.researcherTitle}> • {researcher.title}</span>
+          )}
+          {researcher.affiliation && (
+            <span sx={styles.researcherAffiliation}>({researcher.affiliation})</span>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 const Post = ({ data, pageContext }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark
@@ -75,6 +144,7 @@ const Post = ({ data, pageContext }) => {
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
   const { previous, next } = pageContext
+  const researchers = frontmatter.researchers || []
 
   let props = {
     previous,
@@ -97,6 +167,10 @@ const Post = ({ data, pageContext }) => {
             <h1>{frontmatter.title}</h1>
             <time sx={{color: "muted"}}>{frontmatter.date}</time>
           </section>
+          
+          {/* Add Researchers component here - after the date */}
+          <Researchers researchers={researchers} />
+          
           {Image ? (
             <GatsbyImage
               image={Image}
@@ -131,6 +205,12 @@ export const pageQuery = graphql`
         slug
         title
         description
+        researchers {
+          name
+          title
+          profileUrl
+          affiliation
+        }
         featuredImage {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
