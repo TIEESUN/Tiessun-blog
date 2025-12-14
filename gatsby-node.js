@@ -1,6 +1,25 @@
 const path = require("path");
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+// ADD THIS SECTION - GraphQL schema customization
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+
+  const typeDefs = `
+    type MarkdownRemarkFrontmatterResearchers {
+      name: String
+      title: String
+      profileUrl: String
+    }
+    
+    type MarkdownRemarkFrontmatter implements Node {
+      researchers: [MarkdownRemarkFrontmatterResearchers]
+    }
+  `
+
+  createTypes(typeDefs)
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
 
