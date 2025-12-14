@@ -47,10 +47,9 @@ collections:
         name: "researchers"
         widget: "list"
         required: false
-        hint: "Add researchers or authors with clickable names and titles"
+        hint: "Add researchers - only first names will be displayed as clickable links"
         fields:
-          - { label: "Name", name: "name", widget: "string", hint: "Researcher's full name" }
-          - { label: "Title/Role", name: "title", widget: "string", hint: "e.g., CTI Analyst, Lead Researcher" }
+          - { label: "Name", name: "name", widget: "string", hint: "Full name (only first name will be shown)" }
           - { label: "Profile URL", name: "profileUrl", widget: "string", required: false, hint: "Link to LinkedIn, personal website, etc." }
       
       - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
