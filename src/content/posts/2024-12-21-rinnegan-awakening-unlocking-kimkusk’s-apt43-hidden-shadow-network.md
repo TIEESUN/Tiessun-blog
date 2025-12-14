@@ -5,6 +5,10 @@ slug: /Rinnegan Awakening Unlocking Kimsuk’s-APT43 Hidden Shadow Network
 date: 2024-12-21 22:27
 description: APT-43
 featuredImage: /assets/rinnegan.webp
+researchers:
+  - name: Muhammad Sawood Baig
+    title: Threat Intelligence Analyst
+    profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
 Alias: Mystery Baby,Baby Coin,Smoke Screen,Black Banshee,Velvet Chollima,Thallium,Emerald Sleet,THALLIUM,Sparkling Pisces
 
