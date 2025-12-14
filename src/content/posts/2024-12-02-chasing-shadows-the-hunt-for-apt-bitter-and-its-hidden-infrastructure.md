@@ -6,6 +6,10 @@ date: 2024-12-02 14:31
 description: Apt-Bitter rattle snake sidewinder Asia malware adversary threat
   intelligence threat hunting
 featuredImage: /assets/designer.png
+researchers:
+  - name: ronaldo
+    title: cti
+    profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
 **Alias:** Apt-c-08, Apt-k-47, Manlinghua, Turtlepower, NixBackdoor, Nimbo-C2, ORPCBackdoor
 
