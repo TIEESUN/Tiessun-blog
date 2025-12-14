@@ -2,20 +2,17 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+    create: "Create {{collection}} "{{slug}}""
+    update: "Update {{collection}} "{{slug}}""
+    delete: "Delete {{collection}} "{{slug}}""
     uploadMedia: "[skip ci] Upload "{{path}}""
     deleteMedia: "[skip ci] Delete "{{path}}""
-
-# Uncomment local_backend when you need to develop in your local
-#local_backend: true # run `npx netlify-cms-proxy-server` for local testing
 
 media_folder: "static/assets"
 public_folder: "/assets"
 
 collections:
-  - name: "posts" # Blog posts collection
+  - name: "posts"
     label: "Posts"
     label_singular: "Post"
     description: >
@@ -46,7 +43,6 @@ collections:
       - { label: "SEO Description", name: "description", widget: "text" }
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
       
-      # Add this new section for researchers - SIMPLIFIED VERSION
       - label: "Researchers/Authors"
         name: "researchers"
         widget: "list"
@@ -59,7 +55,7 @@ collections:
       
       - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
       
-  - name: "publications" # New collection for publications
+  - name: "publications"
     label: "Publications"
     label_singular: "Publication"
     description: "Add or edit your publications dynamically."
@@ -74,7 +70,7 @@ collections:
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Body", name: "body", widget: "markdown", hint: "Additional content or details for the publication." }
 
-  - label: "Pages" # Page collection
+  - label: "Pages"
     name: "pages"
     files:
       - label: "Home"
@@ -109,7 +105,7 @@ collections:
           - { label: "Slug", name: "slug", widget: "hidden", default: "/contact" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
-  - name: "settings" # Settings collection
+  - name: "settings"
     label: Settings
     files:
       - name: "general"
@@ -144,7 +140,7 @@ collections:
               - { label: "Icons", name: "icon", widget: "select", options: ["facebook", "twitter", "linkedin", "youtube", "instagram", "rss", "github", "telegram", "pinterest", "snapchat", "skype", "wordpress", "tiktok", "dribbble", "medium", "behance", "vk"], hint: "Select the Icon" }
               - { widget: "string", name: "url", label: "URL", required: true, hint: "Paste the 'URL' of your social media." }
 
-  - label: "Appearance" # Appearance collection
+  - label: "Appearance"
     name: "appearance"
     identifier_field: "name"
     files:
