@@ -22,39 +22,49 @@ const styles = {
       },
     },
   },
-  researchers: {
+  researchersContainer: {
     margin: "20px 0 30px 0",
-    padding: "15px 0",
+    padding: "20px 0",
     borderTop: "1px solid",
     borderBottom: "1px solid",
     borderColor: "muted",
   },
-  researcherItem: {
-    marginBottom: "12px",
-    "&:last-child": {
-      marginBottom: "0",
+  researchersHeading: {
+    fontSize: "1.2rem",
+    fontWeight: "600",
+    marginBottom: "20px",
+    color: "text",
+  },
+  researchersGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    gap: "25px",
+    "@media (max-width: 768px)": {
+      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
     },
+  },
+  researcherCard: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
   },
   researcherName: {
+    fontSize: "1.1rem",
     fontWeight: "600",
-    marginRight: "8px",
-  },
-  researcherTitle: {
-    fontStyle: "italic",
-    color: "muted",
-    fontSize: "0.9em",
-  },
-  researcherAffiliation: {
-    color: "muted",
-    fontSize: "0.9em",
-    marginLeft: "8px",
-  },
-  researcherLink: {
-    color: "primary",
+    marginBottom: "5px",
+    color: "text",
     textDecoration: "none",
     "&:hover": {
+      color: "primary",
       textDecoration: "underline",
     },
+  },
+  researcherTitle: {
+    fontSize: "0.9rem",
+    color: "muted",
+    fontStyle: "italic",
+    lineHeight: "1.4",
   },
 }
 
@@ -101,37 +111,40 @@ const Pagination = props => (
   </div>
 )
 
-// New Researchers component
+// New Researchers component - SIMPLIFIED VERSION
 const Researchers = ({ researchers }) => {
   if (!researchers || researchers.length === 0) {
     return null
   }
 
   return (
-    <div sx={styles.researchers}>
-      <h3 sx={{ marginBottom: "15px", fontSize: "1.1rem" }}>Researchers</h3>
-      {researchers.map((researcher, index) => (
-        <div key={index} sx={styles.researcherItem}>
-          {researcher.profileUrl ? (
-            <a
-              href={researcher.profileUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={styles.researcherLink}
-            >
-              <span sx={styles.researcherName}>{researcher.name}</span>
-            </a>
-          ) : (
-            <span sx={styles.researcherName}>{researcher.name}</span>
-          )}
-          {researcher.title && (
-            <span sx={styles.researcherTitle}> • {researcher.title}</span>
-          )}
-          {researcher.affiliation && (
-            <span sx={styles.researcherAffiliation}>({researcher.affiliation})</span>
-          )}
-        </div>
-      ))}
+    <div sx={styles.researchersContainer}>
+      <h3 sx={styles.researchersHeading}>Researchers</h3>
+      <div sx={styles.researchersGrid}>
+        {researchers.map((researcher, index) => (
+          <div key={index} sx={styles.researcherCard}>
+            {researcher.profileUrl ? (
+              <a
+                href={researcher.profileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={styles.researcherName}
+              >
+                {researcher.name}
+              </a>
+            ) : (
+              <div sx={styles.researcherName}>
+                {researcher.name}
+              </div>
+            )}
+            {researcher.title && (
+              <div sx={styles.researcherTitle}>
+                {researcher.title}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
@@ -209,7 +222,6 @@ export const pageQuery = graphql`
           name
           title
           profileUrl
-          affiliation
         }
         featuredImage {
           childImageSharp {
