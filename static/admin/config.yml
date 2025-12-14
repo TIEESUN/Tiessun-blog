@@ -5,8 +5,8 @@ backend:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
     delete: "Delete {{collection}} “{{slug}}”"
-    uploadMedia: "[skip ci] Upload “{{path}}”"
-    deleteMedia: "[skip ci] Delete “{{path}}”"
+    uploadMedia: "[skip ci] Upload "{{path}}""
+    deleteMedia: "[skip ci] Delete "{{path}}""
 
 # Uncomment local_backend when you need to develop in your local
 #local_backend: true # run `npx netlify-cms-proxy-server` for local testing
@@ -46,17 +46,16 @@ collections:
       - { label: "SEO Description", name: "description", widget: "text" }
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
       
-      # Add this new section for researchers
+      # Add this new section for researchers - SIMPLIFIED VERSION
       - label: "Researchers/Authors"
         name: "researchers"
         widget: "list"
         required: false
-        hint: "Add researchers or authors with their titles and profile links"
+        hint: "Add researchers or authors with clickable names and titles"
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Title/Role", name: "title", widget: "string", required: false }
-          - { label: "Profile URL", name: "profileUrl", widget: "string", required: false }
-          - { label: "Affiliation", name: "affiliation", widget: "string", required: false }
+          - { label: "Name", name: "name", widget: "string", hint: "Researcher's full name" }
+          - { label: "Title/Role", name: "title", widget: "string", hint: "e.g., CTI Analyst, Lead Researcher" }
+          - { label: "Profile URL", name: "profileUrl", widget: "string", required: false, hint: "Link to LinkedIn, personal website, etc." }
       
       - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
       
