@@ -7,7 +7,7 @@ description: Apt-Bitter rattle snake sidewinder Asia malware adversary threat
   intelligence threat hunting
 featuredImage: /assets/designer.png
 researchers:
-  - name: ronaldo
+  - name: ronaldooooo
     title: cti
     profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
