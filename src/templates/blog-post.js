@@ -111,7 +111,6 @@ const Pagination = props => (
   </div>
 )
 
-// New Researchers component - SIMPLIFIED VERSION
 const Researchers = ({ researchers }) => {
   if (!researchers || researchers.length === 0) {
     return null
@@ -150,7 +149,7 @@ const Researchers = ({ researchers }) => {
 }
 
 const Post = ({ data, pageContext }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data
   const { frontmatter, html, excerpt } = markdownRemark
 
   const Image = frontmatter.featuredImage
@@ -181,7 +180,6 @@ const Post = ({ data, pageContext }) => {
             <time sx={{color: "muted"}}>{frontmatter.date}</time>
           </section>
           
-          {/* Add Researchers component here - after the date */}
           <Researchers researchers={researchers} />
           
           {Image ? (
