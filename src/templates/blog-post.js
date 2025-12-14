@@ -25,9 +25,11 @@ const styles = {
   researchersContainer: {
     margin: "8px 0 20px 0",
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
     gap: "10px",
+    width: "100%",
   },
   researcherName: {
     fontSize: "1rem",
@@ -40,7 +42,6 @@ const styles = {
   },
   comma: {
     color: "muted",
-    marginRight: "5px",
   },
 }
 
@@ -92,15 +93,9 @@ const Researchers = ({ researchers }) => {
     return null
   }
 
-  // Get first name only
-  const getFirstName = (fullName) => {
-    return fullName.split(" ")[0]
-  }
-
   return (
     <div sx={styles.researchersContainer}>
       {researchers.map((researcher, index) => {
-        const firstName = getFirstName(researcher.name)
         const isLast = index === researchers.length - 1
         
         return (
@@ -112,11 +107,11 @@ const Researchers = ({ researchers }) => {
                 rel="noopener noreferrer"
                 sx={styles.researcherName}
               >
-                {firstName}
+                {researcher.name}
               </a>
             ) : (
               <span sx={styles.researcherName}>
-                {firstName}
+                {researcher.name}
               </span>
             )}
             {!isLast && <span sx={styles.comma}>,</span>}
@@ -154,18 +149,26 @@ const Post = ({ data, pageContext }) => {
       />
       <article className="blog-post">
         <header className="featured-banner">
-          <section className="article-header">
+          <section className="article-header" style={{ textAlign: "center" }}>
             <h1>{frontmatter.title}</h1>
-            <time sx={{color: "muted"}}>{frontmatter.date}</time>
+            <time sx={{color: "muted", display: "block"}}>
+              {frontmatter.date}
+            </time>
             <Researchers researchers={researchers} />
           </section>
           
           {Image ? (
-            <GatsbyImage
-              image={Image}
-              alt={frontmatter.title + " - Featured image"}
-              className="featured-image"
-            />
+            <div style={{ textAlign: "center", margin: "20px 0" }}>
+              <GatsbyImage
+                image={Image}
+                alt={frontmatter.title + " - Featured image"}
+                className="featured-image"
+                imgStyle={{
+                  maxWidth: "100%",
+                  height: "auto",
+                }}
+              />
+            </div>
           ) : (
             ""
           )}
@@ -201,7 +204,12 @@ export const pageQuery = graphql`
         }
         featuredImage {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 1200
+              quality: 90
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }
