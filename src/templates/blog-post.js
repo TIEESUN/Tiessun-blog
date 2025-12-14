@@ -23,48 +23,24 @@ const styles = {
     },
   },
   researchersContainer: {
-    margin: "20px 0 30px 0",
-    padding: "20px 0",
-    borderTop: "1px solid",
-    borderBottom: "1px solid",
-    borderColor: "muted",
-  },
-  researchersHeading: {
-    fontSize: "1.2rem",
-    fontWeight: "600",
-    marginBottom: "20px",
-    color: "text",
-  },
-  researchersGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-    gap: "25px",
-    "@media (max-width: 768px)": {
-      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
-    },
-  },
-  researcherCard: {
+    margin: "8px 0 20px 0",
     display: "flex",
-    flexDirection: "column",
     alignItems: "center",
-    textAlign: "center",
+    flexWrap: "wrap",
+    gap: "10px",
   },
   researcherName: {
-    fontSize: "1.1rem",
+    fontSize: "1rem",
     fontWeight: "600",
-    marginBottom: "5px",
-    color: "text",
+    color: "primary",
     textDecoration: "none",
     "&:hover": {
-      color: "primary",
       textDecoration: "underline",
     },
   },
-  researcherTitle: {
-    fontSize: "0.9rem",
+  comma: {
     color: "muted",
-    fontStyle: "italic",
-    lineHeight: "1.4",
+    marginRight: "5px",
   },
 }
 
@@ -116,12 +92,19 @@ const Researchers = ({ researchers }) => {
     return null
   }
 
+  // Get first name only
+  const getFirstName = (fullName) => {
+    return fullName.split(" ")[0]
+  }
+
   return (
     <div sx={styles.researchersContainer}>
-      <h3 sx={styles.researchersHeading}>Researchers</h3>
-      <div sx={styles.researchersGrid}>
-        {researchers.map((researcher, index) => (
-          <div key={index} sx={styles.researcherCard}>
+      {researchers.map((researcher, index) => {
+        const firstName = getFirstName(researcher.name)
+        const isLast = index === researchers.length - 1
+        
+        return (
+          <span key={index}>
             {researcher.profileUrl ? (
               <a
                 href={researcher.profileUrl}
@@ -129,21 +112,17 @@ const Researchers = ({ researchers }) => {
                 rel="noopener noreferrer"
                 sx={styles.researcherName}
               >
-                {researcher.name}
+                {firstName}
               </a>
             ) : (
-              <div sx={styles.researcherName}>
-                {researcher.name}
-              </div>
+              <span sx={styles.researcherName}>
+                {firstName}
+              </span>
             )}
-            {researcher.title && (
-              <div sx={styles.researcherTitle}>
-                {researcher.title}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+            {!isLast && <span sx={styles.comma}>,</span>}
+          </span>
+        )
+      })}
     </div>
   )
 }
@@ -178,9 +157,8 @@ const Post = ({ data, pageContext }) => {
           <section className="article-header">
             <h1>{frontmatter.title}</h1>
             <time sx={{color: "muted"}}>{frontmatter.date}</time>
+            <Researchers researchers={researchers} />
           </section>
-          
-          <Researchers researchers={researchers} />
           
           {Image ? (
             <GatsbyImage
