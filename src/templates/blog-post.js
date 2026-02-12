@@ -3,10 +3,8 @@ import { jsx } from "theme-ui"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
 const styles = {
   "article blockquote": {
     "background-color": "cardBg",
@@ -32,9 +30,9 @@ const styles = {
     width: "100%",
   },
   researcherName: {
-    fontSize: "1rem",
-    fontWeight: "600",
-    color: "primary",
+    fontSize: "1.2rem",
+    fontWeight: "700",
+    color: "#ffffff",
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
@@ -44,7 +42,6 @@ const styles = {
     color: "muted",
   },
 }
-
 const Pagination = props => (
   <div className="pagination -post" sx={styles.pagination}>
     <ul>
@@ -87,17 +84,14 @@ const Pagination = props => (
     </ul>
   </div>
 )
-
 const Researchers = ({ researchers }) => {
   if (!researchers || researchers.length === 0) {
     return null
   }
-
   return (
     <div sx={styles.researchersContainer}>
       {researchers.map((researcher, index) => {
         const isLast = index === researchers.length - 1
-        
         return (
           <span key={index}>
             {researcher.profileUrl ? (
@@ -121,22 +115,18 @@ const Researchers = ({ researchers }) => {
     </div>
   )
 }
-
 const Post = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { frontmatter, html, excerpt } = markdownRemark
-
   const Image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
     : ""
   const { previous, next } = pageContext
   const researchers = frontmatter.researchers || []
-
   let props = {
     previous,
     next,
   }
-
   return (
     <Layout className="page">
       <Seo
@@ -151,12 +141,11 @@ const Post = ({ data, pageContext }) => {
         <header className="featured-banner">
           <section className="article-header" style={{ textAlign: "center" }}>
             <h1>{frontmatter.title}</h1>
-            <time sx={{color: "muted", display: "block"}}>
+            <time sx={{ color: "muted", display: "block" }}>
               {frontmatter.date}
             </time>
             <Researchers researchers={researchers} />
           </section>
-          
           {Image ? (
             <div style={{ textAlign: "center", margin: "20px 0" }}>
               <GatsbyImage
@@ -173,7 +162,6 @@ const Post = ({ data, pageContext }) => {
             ""
           )}
         </header>
-
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -183,9 +171,7 @@ const Post = ({ data, pageContext }) => {
     </Layout>
   )
 }
-
 export default Post
-
 export const pageQuery = graphql`
   query BlogPostQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
