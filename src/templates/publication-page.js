@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react";
 import { jsx } from "theme-ui";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
@@ -28,153 +27,167 @@ export const pageQuery = graphql`
 
 const PublicationPage = ({ data }) => {
   const publications = data.allMarkdownRemark.edges;
-  const [query, setQuery] = React.useState("");
-
-  const filteredPublications = publications.filter(({ node }) =>
-    node.frontmatter.title
-      ?.toLowerCase()
-      .includes(query.toLowerCase())
-  );
 
   return (
     <Layout>
       <Seo title="Publications" />
-
-      <div sx={{ maxWidth: "1200px", mx: "auto", px: 3, py: 4 }}>
-        <h1 sx={{ mb: 3 }}>Publications</h1>
-
-        {/* Search */}
-        <input
-          type="text"
-          placeholder="Search publications..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
+      <div
+        sx={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "3rem 1.5rem",
+        }}
+      >
+        <div
           sx={{
-            mb: 4,
-            px: 3,
-            py: 2,
-            width: "100%",
-            maxWidth: "400px",
-            borderRadius: "6px",
-            border: "1px solid",
-            borderColor: "gray",
-            fontSize: 1,
+            marginBottom: "3rem",
+            textAlign: "center",
           }}
-        />
-
-        {/* Responsive table wrapper */}
-        <div sx={{ overflowX: "auto" }}>
-          <table
+        >
+          <h1
             sx={{
-              width: "100%",
-              borderCollapse: "separate",
-              borderSpacing: 0,
-              bg: "background",
-              borderRadius: "10px",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-              overflow: "hidden",
-              minWidth: "800px",
+              fontSize: ["2rem", "2.5rem", "3rem"],
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              color: "text",
             }}
           >
-            <thead>
-              <tr>
-                {["Title", "Abstract", "Link", "Date"].map((heading) => (
-                  <th
-                    key={heading}
+            Publications
+          </h1>
+          <p
+            sx={{
+              fontSize: "1.1rem",
+              color: "muted",
+              maxWidth: "600px",
+              margin: "0 auto",
+            }}
+          >
+            A collection of research publications and academic work
+          </p>
+        </div>
+
+        <div
+          sx={{
+            display: "grid",
+            gap: "1.5rem",
+          }}
+        >
+          {publications.map(({ node }) => {
+            const { title, abstract, link, date } = node.frontmatter;
+            return (
+              <article
+                key={node.id}
+                sx={{
+                  backgroundColor: "background",
+                  border: "1px solid",
+                  borderColor: "muted",
+                  borderRadius: "8px",
+                  padding: "1.5rem",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                    transform: "translateY(-2px)",
+                    borderColor: "primary",
+                  },
+                }}
+              >
+                <div
+                  sx={{
+                    display: "flex",
+                    flexDirection: ["column", "column", "row"],
+                    justifyContent: "space-between",
+                    alignItems: ["flex-start", "flex-start", "center"],
+                    marginBottom: "0.75rem",
+                    gap: "0.5rem",
+                  }}
+                >
+                  <h2
                     sx={{
-                      textAlign: "left",
-                      px: 3,
-                      py: 3,
-                      fontSize: 1,
-                      fontWeight: "bold",
-                      bg: "muted",
-                      borderBottom: "1px solid",
-                      borderColor: "gray",
+                      fontSize: "1.4rem",
+                      fontWeight: "600",
+                      margin: 0,
+                      color: "text",
+                      flex: 1,
                     }}
                   >
-                    {heading}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-
-            <tbody>
-              {filteredPublications.map(({ node }, index) => {
-                const { title, abstract, link, date } = node.frontmatter;
-
-                return (
-                  <tr
-                    key={node.id}
+                    {title || "Untitled"}
+                  </h2>
+                  <time
                     sx={{
-                      bg: index % 2 === 0 ? "background" : "highlight",
-                      transition: "background-color 0.2s ease",
+                      fontSize: "0.9rem",
+                      color: "muted",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {date || "Unknown date"}
+                  </time>
+                </div>
+
+                <p
+                  sx={{
+                    fontSize: "1rem",
+                    lineHeight: "1.6",
+                    color: "text",
+                    marginBottom: "1rem",
+                    opacity: 0.9,
+                  }}
+                >
+                  {abstract || "No abstract available"}
+                </p>
+
+                {link && (
+                  
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      color: "primary",
+                      textDecoration: "none",
+                      fontWeight: "500",
+                      fontSize: "0.95rem",
+                      transition: "all 0.2s ease",
                       "&:hover": {
-                        bg: "muted",
+                        textDecoration: "underline",
+                        gap: "0.75rem",
                       },
                     }}
                   >
-                    <td sx={{ px: 3, py: 3, fontWeight: 600 }}>
-                      {title || "Untitled"}
-                    </td>
-
-                    <td
-                      sx={{
-                        px: 3,
-                        py: 3,
-                        color: "gray",
-                        fontSize: 1,
-                        lineHeight: "1.6",
-                        maxWidth: "500px",
-                      }}
+                    View Publication
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      {abstract || "No abstract available"}
-                    </td>
-
-                    <td sx={{ px: 3, py: 3 }}>
-                      {link ? (
-                        <a
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          sx={{
-                            display: "inline-block",
-                            px: 3,
-                            py: 1,
-                            borderRadius: "6px",
-                            bg: "primary",
-                            color: "background",
-                            fontSize: 0,
-                            fontWeight: "bold",
-                            textDecoration: "none",
-                            "&:hover": {
-                              bg: "secondary",
-                            },
-                          }}
-                        >
-                          View
-                        </a>
-                      ) : (
-                        <span sx={{ color: "gray" }}>—</span>
-                      )}
-                    </td>
-
-                    <td sx={{ px: 3, py: 3, whiteSpace: "nowrap" }}>
-                      {date || "Unknown date"}
-                    </td>
-                  </tr>
-                );
-              })}
-
-              {filteredPublications.length === 0 && (
-                <tr>
-                  <td colSpan="4" sx={{ px: 3, py: 4, textAlign: "center" }}>
-                    No publications found.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                  </a>
+                )}
+              </article>
+            );
+          })}
         </div>
+
+        {publications.length === 0 && (
+          <div
+            sx={{
+              textAlign: "center",
+              padding: "3rem",
+              color: "muted",
+            }}
+          >
+            <p sx={{ fontSize: "1.1rem" }}>No publications available yet.</p>
+          </div>
+        )}
       </div>
     </Layout>
   );
