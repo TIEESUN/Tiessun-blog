@@ -7,6 +7,9 @@ description: The Exploit Theater India Pakistan South Asia Cyberwar Apt-Bitter
   rattle snake sidewinder Asia malware adversary threat intelligence threat
   hunting Mr hamza Side copy transparent tribe Anonsec
 featuredImage: /assets/titlee.png
+researchers:
+  - name: Muhammad Sawood
+    profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
 # **Executive Summary**
 
