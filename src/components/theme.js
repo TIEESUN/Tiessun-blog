@@ -2,28 +2,11 @@
 import { jsx } from "theme-ui"
 import { useColorMode } from "theme-ui"
 import { FiMoon, FiSun } from "react-icons/fi"
-
 const Theme = () => {
-  const [colorMode, setColorMode] = useColorMode()
-  return (
-    <div sx={themeStyles.modeOption}>
-      <button
-        onClick={e => {
-          setColorMode(colorMode === "default" ? "dark" : "default")
-        }}
-      >
-        <div sx={themeStyles.modeIcons}>
-          <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
-          <div sx={themeStyles.modeText}>
-            {colorMode === "default" ? "Dark" : "Light"}
-          </div>
-        </div>
-      </button>
-    </div>
-  )
+  // Theme toggle removed - dark mode is now permanent
+  return null
 }
 export default Theme
-
 const themeStyles = {
   modeOption: {
     button: {
