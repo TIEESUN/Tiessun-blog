@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+import { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -27,27 +28,33 @@ export const pageQuery = graphql`
 
 const PublicationPage = ({ data }) => {
   const publications = data.allMarkdownRemark.edges;
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredPublications = publications.filter(({ node }) => {
+    const { title, abstract } = node.frontmatter;
+    const search = searchTerm.toLowerCase();
+    return (
+      title?.toLowerCase().includes(search) ||
+      abstract?.toLowerCase().includes(search)
+    );
+  });
 
   return (
     <Layout>
       <Seo title="Publications" />
       <div
         sx={{
-          maxWidth: "1200px",
+          maxWidth: "1100px",
           margin: "0 auto",
-          padding: "3rem 1.5rem",
+          padding: ["2rem 1rem", "3rem 2rem"],
         }}
       >
-        <div
-          sx={{
-            marginBottom: "3rem",
-            textAlign: "center",
-          }}
-        >
+        {/* Header */}
+        <div sx={{ marginBottom: "2.5rem" }}>
           <h1
             sx={{
-              fontSize: ["2rem", "2.5rem", "3rem"],
-              fontWeight: "bold",
+              fontSize: ["1.75rem", "2.25rem"],
+              fontWeight: "700",
               marginBottom: "0.5rem",
               color: "text",
             }}
@@ -56,23 +63,41 @@ const PublicationPage = ({ data }) => {
           </h1>
           <p
             sx={{
-              fontSize: "1.1rem",
+              fontSize: "1rem",
               color: "muted",
-              maxWidth: "600px",
-              margin: "0 auto",
+              marginBottom: "1.5rem",
             }}
           >
-            A collection of research publications and academic work
+            Research publications and academic work
           </p>
+
+          {/* Search Bar */}
+          <input
+            type="text"
+            placeholder="Search publications..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            sx={{
+              width: "100%",
+              maxWidth: "500px",
+              padding: "0.75rem 1rem",
+              fontSize: "1rem",
+              border: "1px solid",
+              borderColor: "muted",
+              borderRadius: "6px",
+              outline: "none",
+              transition: "all 0.2s ease",
+              "&:focus": {
+                borderColor: "primary",
+                boxShadow: "0 0 0 3px rgba(0, 123, 255, 0.1)",
+              },
+            }}
+          />
         </div>
 
-        <div
-          sx={{
-            display: "grid",
-            gap: "1.5rem",
-          }}
-        >
-          {publications.map(({ node }) => {
+        {/* Publications List */}
+        <div sx={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+          {filteredPublications.map(({ node }) => {
             const { title, abstract, link, date } = node.frontmatter;
             return (
               <article
@@ -80,61 +105,67 @@ const PublicationPage = ({ data }) => {
                 sx={{
                   backgroundColor: "background",
                   border: "1px solid",
-                  borderColor: "muted",
+                  borderColor: "#e5e7eb",
                   borderRadius: "8px",
-                  padding: "1.5rem",
-                  transition: "all 0.3s ease",
+                  padding: ["1.25rem", "1.5rem"],
+                  transition: "all 0.2s ease",
                   "&:hover": {
-                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                    transform: "translateY(-2px)",
-                    borderColor: "primary",
+                    borderColor: "#cbd5e1",
+                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
                   },
                 }}
               >
+                {/* Title and Date */}
                 <div
                   sx={{
                     display: "flex",
-                    flexDirection: ["column", "column", "row"],
+                    flexDirection: ["column", "row"],
                     justifyContent: "space-between",
-                    alignItems: ["flex-start", "flex-start", "center"],
+                    alignItems: ["flex-start", "baseline"],
+                    gap: ["0.5rem", "1rem"],
                     marginBottom: "0.75rem",
-                    gap: "0.5rem",
                   }}
                 >
                   <h2
                     sx={{
-                      fontSize: "1.4rem",
+                      fontSize: ["1.15rem", "1.25rem"],
                       fontWeight: "600",
                       margin: 0,
                       color: "text",
-                      flex: 1,
+                      lineHeight: "1.4",
                     }}
                   >
                     {title || "Untitled"}
                   </h2>
                   <time
                     sx={{
-                      fontSize: "0.9rem",
-                      color: "muted",
+                      fontSize: "0.875rem",
+                      color: "#6b7280",
                       whiteSpace: "nowrap",
+                      fontWeight: "500",
                     }}
                   >
                     {date || "Unknown date"}
                   </time>
                 </div>
 
+                {/* Abstract */}
                 <p
                   sx={{
-                    fontSize: "1rem",
-                    lineHeight: "1.6",
-                    color: "text",
+                    fontSize: "0.95rem",
+                    lineHeight: "1.65",
+                    color: "#4b5563",
                     marginBottom: "1rem",
-                    opacity: 0.9,
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
                   }}
                 >
                   {abstract || "No abstract available"}
                 </p>
 
+                {/* Link */}
                 {link && (
                   
                     href={link}
@@ -143,32 +174,30 @@ const PublicationPage = ({ data }) => {
                     sx={{
                       display: "inline-flex",
                       alignItems: "center",
-                      gap: "0.5rem",
+                      gap: "0.4rem",
                       color: "primary",
                       textDecoration: "none",
+                      fontSize: "0.9rem",
                       fontWeight: "500",
-                      fontSize: "0.95rem",
-                      transition: "all 0.2s ease",
+                      transition: "gap 0.2s ease",
                       "&:hover": {
                         textDecoration: "underline",
-                        gap: "0.75rem",
+                        gap: "0.6rem",
                       },
                     }}
                   >
                     View Publication
                     <svg
-                      width="16"
-                      height="16"
+                      width="14"
+                      height="14"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      strokeWidth="2"
+                      strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
+                      <path d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                   </a>
                 )}
@@ -177,15 +206,34 @@ const PublicationPage = ({ data }) => {
           })}
         </div>
 
-        {publications.length === 0 && (
+        {/* Empty State */}
+        {filteredPublications.length === 0 && (
           <div
             sx={{
               textAlign: "center",
-              padding: "3rem",
-              color: "muted",
+              padding: "3rem 1rem",
+              color: "#9ca3af",
             }}
           >
-            <p sx={{ fontSize: "1.1rem" }}>No publications available yet.</p>
+            <svg
+              width="64"
+              height="64"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              sx={{ margin: "0 auto 1rem", opacity: 0.5 }}
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <p sx={{ fontSize: "1.05rem", fontWeight: "500" }}>
+              {searchTerm
+                ? "No publications found matching your search"
+                : "No publications available yet"}
+            </p>
           </div>
         )}
       </div>
