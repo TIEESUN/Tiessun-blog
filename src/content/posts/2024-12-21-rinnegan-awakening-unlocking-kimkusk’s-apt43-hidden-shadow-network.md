@@ -6,8 +6,7 @@ date: 2024-12-21 22:27
 description: APT-43
 featuredImage: /assets/rinnegan.webp
 researchers:
-  - name: Muhammad Sawood Baig
-    title: Threat Intelligence Analyst
+  - name: Muhammad Sawood
     profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
 Alias: Mystery Baby,Baby Coin,Smoke Screen,Black Banshee,Velvet Chollima,Thallium,Emerald Sleet,THALLIUM,Sparkling Pisces
