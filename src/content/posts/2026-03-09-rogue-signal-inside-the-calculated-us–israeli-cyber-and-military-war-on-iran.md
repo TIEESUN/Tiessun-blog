@@ -10,6 +10,7 @@ description: |-
   OSINT Iran military analysis
   Iran nuclear facility strike
   ICS SCADA cyberwarfare Iran
+featuredImage: /assets/iran.jpg
 researchers:
   - name: Sarah Jawaid
     profileUrl: https://linkedin.com/in/sarahjawaid
