@@ -10,14 +10,13 @@ description: |-
   OSINT Iran military analysis
   Iran nuclear facility strike
   ICS SCADA cyberwarfare Iran
-featuredImage: /assets/iran.jpg
 researchers:
   - name: Sarah Jawaid
     profileUrl: https://linkedin.com/in/sarahjawaid
   - name: Muhammad Sawood
     profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
-![]()
+![WhatsApp Image 2026-03-09 at 20.19.37.jpeg](/assets/whatsapp-image-2026-03-09-at-20.19.37-1-.jpeg)
 
 - - -
 
@@ -39,11 +38,11 @@ The massive paralysis did not happen overnight, but lasted for several months. T
 
 In the months leading up to the operation, US and Israeli cyber forces conducted extensive strategic preparations targeting Iran's critical infrastructure. This involved long-term infiltration of the country's energy sector networks, allowing attackers to map vulnerabilities and deploy dormant malware deep within Industrial Control Systems (ICS) and Supervisory Control and Data Acquisition (SCADA) systems. Reconnaissance efforts focused on identifying weak points in grid synchronization protocols, pipeline valve command structures, and the satellite communication frequencies relied upon by energy facilities. Cyber units coordinated closely with electronic warfare assets to ensure synchronized execution, while trigger mechanisms were carefully developed to activate malware at the precise moment physical strikes would begin, maximizing destruction and paralyzing any coordinated response.
 
-![](/assets/image.png)
+![image.png](/assets/image.png)
 
-![](/assets/image-1-.png)
+![image.png](/assets/image-1-.png)
 
-![](/assets/image-2-.png)
+![image.png](/assets/image-2-.png)
 
 **Supply Chain Attacks**
 
@@ -53,7 +52,7 @@ The United States and Israel conducted supply chain attacks, infiltrating mainte
 
 Simultaneously, the US secretly shipped nearly 7,000 Starlink terminals to Iran through covert channels, with President Trump fully aware of the deliveries. Beyond helping civilians bypass the national firewall, attackers exploited Starlink terminal vulnerabilities to further establish hidden communication pathways. When ground communications are severed, a resilient satellite network becomes the ultimate high ground for information warfare.
 
-![](/assets/image-3-.png)
+![image.png](/assets/image-3-.png)
 
 **Strategic Coordination**
 
@@ -65,7 +64,7 @@ Cyber units coordinated with electronic warfare assets to ensure synchronized ex
 
 During protests that forced the Iranian government to impose a nationwide internet shutdown, US-Israeli cyber forces seized the opportunity to conduct real-world testing. As Iran's national network and energy industrial control systems buckled under the blackout, attackers probed for vulnerabilities and mapped emergency response mechanisms, effectively using the chaos as a live-fire exercise to calibrate their final assault. This directional positioning allowed them to refine targeting coordinates with precision, ensuring that when the physical strikes came, every logic bomb and malicious payload would hit its mark with devastating accuracy.
 
-![](/assets/image-4-.png)
+![image.png](/assets/image-4-.png)
 
 - - -
 
@@ -73,12 +72,12 @@ During protests that forced the Iranian government to impose a nationwide intern
 
 * On February 4, 2026 (GMT+8), NSFOCUS detected a DDoS attack on the Iranian news website [www.tabnak.ir](http://www.tabnak.ir/). The attack was launched by a new variant of the Mirai botnet.
 
-![](/assets/image-5-.png)
+![image.png](/assets/image-5-.png)
 
 * On February 20, 2026 (GMT+8), monitoring detected a DDoS attack on Iran's National Smart Government Services Portal ([my.gov.ir](http://my.gov.ir)).
 * Reportedly, there were also several attacks launched on Iran’s Supreme Leader’s official website
 
-![](/assets/image-6-.png)
+![image.png](/assets/image-6-.png)
 
 - - -
 
@@ -106,7 +105,7 @@ Massive distributed denial of service (DDoS) attacks flooded the energy sector's
 
 Electronic warfare was synchronized with the cyber assault. GPS signal interference and electromagnetic suppression targeted specific communication frequency bands, particularly those used by energy facilities. By disrupting the GPS timing signals essential for grid synchronization, attackers directly induced frequency oscillations and chain reactions of protection devices, causing physical damage that compounded the digital destruction.
 
-![](/assets/image-7-.png)
+![image.png](/assets/image-7-.png)
 
 - - -
 
@@ -118,17 +117,17 @@ As the national backbone connection dropped to 4%, a pre-set internal logic trig
 
 In the communication vacuum across the country, the Badesaba notification service sprang to life, displaying a carefully designed Persian pop-up across millions of screens: **"Help has arrived."**
 
-![](/assets/image-8-.png)
+![image.png](/assets/image-8-.png)
 
 - - -
 
-![](/assets/image-9-.png)
+![image.png](/assets/image-9-.png)
 
 ### 3.3 Messages Sent to the Iranian People by Mossad
 
 During the operation, Mossad sent direct messages to the Iranian people via digital channels as part of the broader psychological warfare and information operations component of the campaign.
 
-![](/assets/whatsapp-image-2026-03-03-at-11.22.52-1-.jpeg)
+![WhatsApp Image 2026-03-03 at 11.22.52.jpeg](/assets/whatsapp-image-2026-03-03-at-11.22.52-1-.jpeg)
 
 - - -
 
@@ -136,9 +135,9 @@ During the operation, Mossad sent direct messages to the Iranian people via digi
 
 One of the early targets of the cyberattack was Iran's official media system. A number of news websites were hacked and had their pages tampered with to display various unauthorized information. Reports on Iranian Telegram channels noted that as physical strikes were underway, "a broad wave of cyber activism" had already been launched. Confirmed targets included IRNA (the official state news agency) and ISNA (the semi-official Iranian Student News Agency). This attack on media infrastructure served a dual purpose: to disrupt the government's channels of information while simultaneously paving the way for subsequent psychological warfare.
 
-![](/assets/image-10-.png)
+![image.png](/assets/image-10-.png)
 
-![](/assets/image-11-.png)
+![image.png](/assets/image-11-.png)
 
 - - -
 
@@ -146,9 +145,9 @@ One of the early targets of the cyberattack was Iran's official media system. A 
 
 Reports indicate that Iran's television broadcast signal was interrupted by a split screen showing President Trump and Prime Minister Netanyahu speaking with Persian subtitles, urging Iranians to rise up against the regime. In a video message directed at the Iranian people, Trump declared: **"Your moment of freedom is coming,"** and called on citizens to **"take over your government"** once the military phase concluded. The ultimate message of this information warfare campaign is unmistakable: the operation's goal extends far beyond the destruction of military installations — it is aimed at regime change in the Islamic Republic of Iran.
 
-![](/assets/image-12-.png)
+![image.png](/assets/image-12-.png)
 
-![](/assets/image-13-.png)
+![image.png](/assets/image-13-.png)
 
 - - -
 
@@ -156,19 +155,19 @@ Reports indicate that Iran's television broadcast signal was interrupted by a sp
 
 The nationwide internet connection rate plummeted to 4%. This was not an ordinary submarine cable failure or a simple DDoS interruption. Based on online reports and OSINT sources, this is a multi-dimensional collaborative "network saturation attack." What the joint US-Israeli command has shown is the double harvesting of the logical layer and the physical layer.
 
-![](/assets/image-14-.png)
+![image.png](/assets/image-14-.png)
 
 **The Logical Layer Attack**
 
 The first wave targeted the internet's backbone. The BGP protocol, normally a messenger for routing, became a deadly traitor in the early hours of February 27. Attackers executed massive BGP route hijacking, broadcasting a false best path that, within minutes, funneled all international traffic in and out of Iran into a preset digital black hole. Simultaneous root domain hijacking threw even domestic DNS resolution into chaos, leaving Iran's network lost in a digital maze. The real killer lurked deeper: a long-embedded zero-day in Iran's national intranet authentication system was activated. By tampering with the header logic of communication protocols, the attackers caused gateway devices to crash when processing malformed packets, exposing and weaponizing the firewall's self-protect mechanisms. This turned defensive floodgates into a chain reaction that locked the system down.
 
-![](/assets/image-15-.png)
+![image.png](/assets/image-15-.png)
 
 **The Physical Layer Attack**
 
 Just as the logical layer was paralyzed, the physical attack struck in sync. US EA-18G Growler electronic fighters cut into communication links, using high-power narrow-band interference to disable microwave towers and 5G base stations around Tehran.
 
-![](/assets/image-16-.png)
+![image.png](/assets/image-16-.png)
 
 - - -
 
@@ -176,7 +175,7 @@ Just as the logical layer was paralyzed, the physical attack struck in sync. US 
 
 ATMs and payment systems were paralysed across Iran as a result of the cyber operations.
 
-![](/assets/image-17-.png)
+![image.png](/assets/image-17-.png)
 
 - - -
 
@@ -184,7 +183,7 @@ ATMs and payment systems were paralysed across Iran as a result of the cyber ope
 
 Airport scheduling and air traffic control systems failed, resulting in widespread delays.
 
-![](/assets/image-18-.png)
+![image.png](/assets/image-18-.png)
 
 - - -
 
@@ -194,7 +193,7 @@ Airport scheduling and air traffic control systems failed, resulting in widespre
 
 The immediate military value of the cyberattack was the systematic blinding of Iran's air defense networks. By paralyzing the power grid that fed radar stations and command centers, and severing the communications and data links they depended on, attackers rendered Iran's air defense system largely ineffective during the initial phase of the operation. Radar screens went dark, early warning systems fell silent, and defenders found themselves unable to effectively monitor their own airspace or mount a timely counterattack against incoming stealth aircraft.
 
-![](/assets/image-19-.png)
+![image.png](/assets/image-19-.png)
 
 - - -
 
@@ -202,7 +201,7 @@ The immediate military value of the cyberattack was the systematic blinding of I
 
 The collapse of Iran's national communications system created chaos at the highest levels of military and government decision-making. Reliable, real-time communication between Iranian military units and senior leadership, including the supreme command body, became extremely difficult or impossible. The command, control, and intelligence (C3I) system was effectively shattered, meaning that even units still capable of fighting received no orders, while leadership remained blind to the developing tactical situation on the ground.
 
-![](/assets/image-20-.png)
+![image.png](/assets/image-20-.png)
 
 - - -
 
@@ -212,9 +211,9 @@ While Iran groped in the dark, US and Israeli forces operated with near-perfect 
 
 The cumulative effect of the above was the creation of a "one-way transparent" battlefield, a concept where one side enjoys complete visibility. This military principle, which first emerged prominently during the 2003 Iraq War, reached new heights in the Iran operation.
 
-![](/assets/image-21-.png)
+![image.png](/assets/image-21-.png)
 
-![](/assets/image-22-.png)
+![image.png](/assets/image-22-.png)
 
 - - -
 
@@ -232,55 +231,55 @@ Armed with intelligence derived from signal monitoring, precision strikes target
 
 After the physical strike, the cyberattack shifted to causing secondary damage to the infrastructure of the targeted region. US-Israeli cyber forces launched targeted attacks on Industrial Control Systems (ICS) at the damaged military installations. By remotely locking ventilation systems, power adjustment devices, and automated sealed doors, the attackers prevented post-disaster repair of the damaged facilities. This "logic lock" not only expanded the effect of the physical strikes but also completely paralyzed a large number of command nodes buried deep underground through system replication.
 
-![](/assets/image-23-.png)
+![image.png](/assets/image-23-.png)
 
 **February 28, 2026 — All Day (Multiple Waves of Airstrikes)** Airpower: More than 125 aircraft participated in the strikes, including 75 refueling aircraft to guarantee a long-range assault.
 
 Cyber warfare continues. EA-18G Growler implements full electronic warfare suppression, and the NSA signals intelligence department monitors Iran's command communication channel in real time to assess the effect of strikes.
 
-![](/assets/image-24-.png)
+![image.png](/assets/image-24-.png)
 
 * Attack on Shajareh Tayyebeh” (The Good Tree) school in the city of Minab in southern Iran, a terrible war crime
 
-![](/assets/image-25-.png)
+![image.png](/assets/image-25-.png)
 
-![](/assets/iraan.jpeg)
+![image.png](/assets/image-26-.png)
 
 * Attack on Iran’s Supreme Leader’s compound in Tehran
 
-![](/assets/image-28-.png)
+![image.png](/assets/image-28-.png)
 
-![](/assets/image-31-.png)
+![image.png](/assets/image-31-.png)
 
 * Konarak Port strike
 
-![](/assets/image-30-.png)
+![image.png](/assets/image-30-.png)
 
-![](/assets/image-33-.png)
+![image.png](/assets/image-33-.png)
 
-Smoke can be seen rising from the location
+Smoke can be seen rising from the location in the first picture
 
 **March 1, 2026**
 
 * Natanz Nuclear Site Attack (satellite image published by Vantor)
 
-![](/assets/image-34-.png)
+![image.png](/assets/image-34-.png)
 
 The image below shows undamaged sites prior to the attack (March 2026)
 
-![](/assets/iranattack1.png)
+![iranattack1.png](/assets/iranattack1.png)
 
 The entrance and exit buildings of the underground fuel enrichment plant in Natanz, Iran were hit and significantly damaged.
 
 * Zahedan airbase attack
 
-![](/assets/image-35-.png)
+![image.png](/assets/image-35-.png)
 
-![](/assets/image-36-.png)
+![image.png](/assets/image-36-.png)
 
 * IRGC Sarollah HQ attacked
 
-![](/assets/image-37-.png)
+![image.png](/assets/image-37-.png)
 
 IRGC Sarollah (“God’s Revenge”) headquarters in located in Tehran. Buildings within the elite complex were responsible for protecting Tehran’s government institutions and suppressing internal dissent. The Sarollah unit is a key element of Iran’s internal security, tasked with safeguarding the capital and responding to protests or unrest.
 
@@ -288,19 +287,19 @@ IRGC Sarollah (“God’s Revenge”) headquarters in located in Tehran. Buildin
 
 Two Iranian F-5 and F-4 fighter jets at Tabriz airport were struck in western Iran as they were prepared for takeoff
 
-![](/assets/image-38-.png)
+![image.png](/assets/image-38-.png)
 
 **March 2, 2026**
 
 * Choqa Baulk-e Alireza drone base attack
 
-![](/assets/image-39-.png)
+![image.png](/assets/image-39-.png)
 
 * Bandar Abbas harbour airstrike, in Hormozgan Province
 
-![](/assets/image-40-.png)
+![image.png](/assets/image-40-.png)
 
-![](/assets/image-41-.png)
+![image.png](/assets/image-41-.png)
 
 - - -
 
@@ -308,27 +307,27 @@ Two Iranian F-5 and F-4 fighter jets at Tabriz airport were struck in western Ir
 
 * Attack on IRGC HQ in Tehran
 
-![](/assets/image-42-.png)
+![image.png](/assets/image-42-.png)
 
 * Large damage to key buildings at a Naval base in Bushehr, Iran
 
-![](/assets/image-43-.png)
+![image.png](/assets/image-43-.png)
 
 * Attack at Isfahan North missile base
 
-![](/assets/image-44-.png)
+![image.png](/assets/image-44-.png)
 
-![](/assets/image-45-.png)
+![image.png](/assets/image-45-.png)
 
 * Iran Police Headquarters attack
 
-![](/assets/image-46-.png)
+![image.png](/assets/image-46-.png)
 
-![](/assets/image-47-.png)
+![image.png](/assets/image-47-.png)
 
 Large damage at the Islamic Republic of Iran Police Headquarters in District 3 of Tehran. Other police facilities in the city were also struck as part of a broader campaign targeting internal security infrastructure.
 
-![](/assets/image-48-.png)
+![image.png](/assets/image-48-.png)
 
 (Posted by Bellingcat)
 
@@ -336,37 +335,37 @@ Large damage at the Islamic Republic of Iran Police Headquarters in District 3 o
 
 * The IRIS Dena was the newest destroyer vessel in Iran’s naval fleet, and was commissioned as part of Iran’s domestically-produced Moudge or Mowj class multi-role guided missile frigates in 2021. The warship featured anti-ship missiles, surface-to-air missiles, torpedo launchers, machine guns, and a cannon. It was torpedoed by a U.S. nuclear submarine.
 
-![](/assets/image-49-.png)
+![image.png](/assets/image-49-.png)
 
 **March 5, 2026**
 
 * A large fire visible from in Bushehr International Airport, Iran.
 
-![](/assets/image-50-.png)
+![image.png](/assets/image-50-.png)
 
 * Attack on Iranian Emergency Medical Base in Shiraz
 
-![](/assets/image-51-.png)
+![image.png](/assets/image-51-.png)
 
-![](/assets/image-52-.png)
+![image.png](/assets/image-52-.png)
 
 **MARCH 6, 2026**
 
 * US and Israeli airstrikes hit an IRGC intelligence site in Lorestan
 
-![](/assets/image-53-.png)
+![image.png](/assets/image-53-.png)
 
 **MARCH 7, 2026**
 
 * Mehrabad airport attack
 
-![](/assets/image-54-.png)
+![image.png](/assets/image-54-.png)
 
 Images below show airport before attack
 
-![](/assets/image-55-.png)
+![image.png](/assets/image-55-.png)
 
-![](/assets/image-56-.png)
+![image.png](/assets/image-56-.png)
 
 * US hit desalination plant on Qeshm Island
 
@@ -376,19 +375,19 @@ A US attack struck a freshwater desalination plant on Iran’s Qeshm Island, dis
 
 * Attack at a Military Garrison, Isfahan, Iran
 
-![](/assets/image-57-.png)
+![image.png](/assets/image-57-.png)
 
 * US, Israel hit five oil sites in and near Tehran
 
-![](/assets/image-58-.png)
+![image.png](/assets/image-58-.png)
 
-![](/assets/image-59-.png)
+![image.png](/assets/image-59-.png)
 
 ## 6. CENTCOM's Weapons List and the "Special Capabilities"
 
 On March 1, 2026, US CENTCOM released a rare list of weapons and equipment for Operation "Epic Fury" on platform X and officially confirmed the existence of "special capabilities" for the first time but they didn't list them. Strategic intent: to deter Iran and show US military all-spectrum operational potential which is not only accurate but also makes your systems invisible, unconnected and unable to fight.
 
-![](/assets/image-60-.png)
+![image.png](/assets/image-60-.png)
 
 Based on the USCYBERCOM operational system and the latest developments in 2025, these special capabilities are likely to point to the following cyber warfare methods:
 
@@ -404,7 +403,7 @@ Based on the USCYBERCOM operational system and the latest developments in 2025, 
 * **Operational Effect:** Using AI-powered "Cognitive Electronic Warfare" to instantly analyze Iranian air defense systems (like the S-300 and Bavar-373). The system identifies their radar signals and generates precise interference to either blind the radar or trick it into seeing fake targets.
 * **Battlefield role:** Opening up an "Electromagnetic Corridor" for the B-2 stealth bomber to ensure its penetration into the Iranian air defense network
 
-![](/assets/image-61-.png)
+![image.png](/assets/image-61-.png)
 
 ### 6.3 Disable Command Communication Network
 
