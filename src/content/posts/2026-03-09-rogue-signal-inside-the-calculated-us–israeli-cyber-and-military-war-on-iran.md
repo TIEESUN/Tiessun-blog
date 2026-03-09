@@ -244,7 +244,7 @@ Cyber warfare continues. EA-18G Growler implements full electronic warfare suppr
 
 ![](/assets/image-25-.png)
 
-![](/assets/image-26-.png)
+![](/assets/iraan.jpeg)
 
 * Attack on Iran’s Supreme Leader’s compound in Tehran
 
