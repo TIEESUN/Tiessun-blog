@@ -17,7 +17,7 @@ researchers:
   - name: Muhammad Sawood
     profileUrl: https://www.linkedin.com/in/muhammadsawood/
 ---
-![](/assets/whatsapp-image-2026-03-09-at-20.19.37-1-.jpeg)
+![]()
 
 - - -
 
